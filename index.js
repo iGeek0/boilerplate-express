@@ -7,6 +7,12 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
+// pagina de inicio.
+app.get("/", function (req, res) {
+    // GET - http://localhost:3000
+    res.send("API v1.0");
+});
+
 app.get('/test', (req, res) => {
     // GET - http://localhost:3000/test
     res.status(200).json({
